@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Finland</title>
+
+
+  <style>
+    * {
+        box-sizing: border-box;
+    }
+
+    h2, p {
+        padding: 0;
+        margin: 0;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    body {
+        width: 100vw;
+        height: 100vh;
+        padding: 0 2rem;
+        display:flex;
+        justify-content: center;
+        font-family: Arial, Helvetica, sans-serif;
+        }
+
+    .dashboard {
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: "title title title title"
+                             "population welcome welcome welcome"
+                             "gdp code govt news";
+        gap: 1rem;
+    }
+
+
+    .grid-cell {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        background-size: cover;
+    }
+
+    .title {
+        display:flex;
+        grid-area: title;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        font-weight: bolder;
+        font-size: 2.5rem;
+    }
+
+    .population {
+        grid-area: population;
+        background-image: url(/images/finland-8.jpg);
+        background-position: bottom left;
+        background-repeat: no-repeat;
+        justify-content: flex-end;
+    }
+
+    .welcome {
+        grid-area: welcome;
+        background-image: url(/images/finland-2.jpg);
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+
+    .gdp {
+        grid-area: gdp;
+        background-image: url(/images/finland-3.jpg);
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+
+    .code {
+        grid-area: code;
+        background-image: url(/images/finland-4.jpg);
+    }
+
+    .govt {
+        grid-area: govt;
+        background-image: url(/images/finland-1.jpg);
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
+
+    .news {
+        grid-area: news;
+        background-image: url(/images/finland-5.jpg);
+        background-repeat: no-repeat;
+        justify-content: center;
+    }
+
+    .news button {
+        align-self: flex-end;
+        border: none;
+        border-radius: 3px;
+        margin: 5px 0;
+    }
+
+    .news input {
+        border:none;
+        padding: 4px;
+    }
+
+    .news input, .news label {
+        font-size: 1rem;
+        margin: 4px 0;
+    }
+
+    .news h2 {
+        padding-bottom: 5px;
+    }
+    
+
+
+  </style>
+</head>
+<body>
+  <div class="dashboard">
+    <h1 class="title">Finland</h1>
+
+    <div class="population grid-cell">
+        <h2>population: </h2>
+        <p>5,536,146</p>
+    </div>
+    
+    <div class="welcome grid-cell">
+      <h2>Welcome</h2>
+      <p>Natural Resources, Economic Initiatives, Community Spaces</p>
+    </div>
+
+    <div class="gdp grid-cell">
+      <h2>GDP</h2>
+      <p>257 billion</p>
+    </div>
+
+    <div class="code grid-cell">
+      <h2>Calling Code</h2>
+      <p>+ 358</p>
+    </div>
+
+    <div class="govt grid-cell">
+      <h2>Government</h2>
+      <p>Unitary parliamentary republic</p>
+    </div>
+
+    <div class="news grid-cell">
+      <h2>News</h2>
+      <label for="name">Name:</label>
+      <input id="name" type="text" placeholder="name"/>
+      <label for="email">Email:</label>
+      <input id="email" type="email" placeholder="email"/>
+      <button>Send</button>
+    </div>
+
+  </div>
+  
+</body>
+</html>
